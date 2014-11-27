@@ -120,5 +120,7 @@
 - (IBAction)goBtnPressed:(id)sender {
     NSString *url = [NSString stringWithFormat:@"http://%@", self.textField.text];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    
+    [self.textField resignFirstResponder];
 }
 @end
